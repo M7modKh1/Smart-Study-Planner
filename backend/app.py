@@ -341,7 +341,7 @@ def join_course():
     }), 200
 
 
-@app.route("/institutions/<institution>/courses", methods=["GET"])
+@app.route("/institutions/<path:institution>/courses", methods=["GET"])
 def search_institution_courses(institution):
     """Return courses at the given institution, optionally filtered by query string.
 
